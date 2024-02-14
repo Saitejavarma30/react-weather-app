@@ -14,7 +14,7 @@ const Search = ({ onSearchChange }) => {
   const loadOptions = async (inputValue) => {
     try {
       const response = await fetch(
-        `${API_URL}?minPopulation=1000000&namePrefix=${inputValue}&limit=10`,
+        `${API_URL}?namePrefix=${inputValue}&limit=10`,
         options
       );
       const result = await response.json();
